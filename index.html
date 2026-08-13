@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dennis Misenmawu Yesu — Product & Project Manager</title>
+<meta name="description" content="Dennis Misenmawu Yesu — Product Manager with 5+ years driving fintech, e-commerce and SaaS product strategy and delivery. Portfolio, case studies, and contact.">
+<style>
+  :root{
+    --ink: #0f172a;
+    --ink-soft: #3f4a5e;
+    --ink-muted: #6b7488;
+    --line: #e4e7ee;
+    --paper: #ffffff;
+    --panel: #f7f8fb;
+    --accent: #1d4ed8;
+    --accent-soft: #eef2ff;
+    --accent-ink: #1e3a8a;
+    --radius: 14px;
+    --maxw: 1080px;
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a{ color: var(--accent); text-decoration: none; }
+  a:hover{ text-decoration: underline; }
+  img{ max-width:100%; display:block; }
+  .wrap{ max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+  section{ padding: 76px 0; border-top: 1px solid var(--line); }
+  section:first-of-type{ border-top: none; }
+  h2.section-title{
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 34px;
+  }
+
+  /* NAV */
+  .nav{
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: saturate(180%) blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-top: 16px; padding-bottom: 16px;
+  }
+  .nav-name{ font-weight: 800; font-size: 16px; letter-spacing: -0.01em; }
+  .nav-links{ display:flex; gap: 26px; font-size: 14px; font-weight: 600; color: var(--ink-soft); }
+  .nav-links a{ color: var(--ink-soft); }
+  .nav-links a:hover{ color: var(--accent); text-decoration:none; }
+  .nav-cta{
+    font-size: 13px; font-weight: 700; color: #fff !important; background: var(--ink);
+    padding: 9px 16px; border-radius: 999px;
+  }
+  .nav-cta:hover{ text-decoration:none; background: var(--accent); }
+
+  /* HERO */
+  .hero{ padding: 84px 0 70px 0; border-top:none; }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--accent-ink); background: var(--accent-soft);
+    padding: 7px 14px; border-radius: 999px; margin-bottom: 22px;
+  }
+  .hero h1{
+    font-size: 48px; font-weight: 800; line-height: 1.1; letter-spacing: -0.02em;
+    max-width: 760px; margin-bottom: 18px;
+  }
+  .hero .role-line{
+    font-size: 20px; font-weight: 500; color: var(--ink-soft); max-width: 680px; margin-bottom: 28px;
+  }
+  .hero .lede{
+    font-size: 17px; color: var(--ink-soft); max-width: 700px; margin-bottom: 34px;
+  }
+  .contact-row{
+    display:flex; flex-wrap:wrap; gap: 10px 22px; font-size: 14px; color: var(--ink-muted); margin-bottom: 34px;
+  }
+  .contact-row a{ color: var(--ink-muted); font-weight: 600; }
+  .contact-row a:hover{ color: var(--accent); }
+  .cta-row{ display:flex; flex-wrap:wrap; gap: 14px; }
+  .btn{
+    display:inline-block; font-size: 14px; font-weight: 700; padding: 13px 24px; border-radius: 10px;
+  }
+  .btn-primary{ background: var(--ink); color:#fff; }
+  .btn-primary:hover{ background: var(--accent); text-decoration:none; }
+  .btn-secondary{ background: var(--panel); color: var(--ink); border: 1px solid var(--line); }
+  .btn-secondary:hover{ border-color: var(--accent); color: var(--accent); text-decoration:none; }
+
+  /* STATS STRIP */
+  .stats-strip{
+    display:grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+    background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow:hidden;
+  }
+  .stat-cell{ background: var(--paper); padding: 26px 22px; }
+  .stat-cell .val{ font-size: 28px; font-weight: 800; letter-spacing: -0.01em; margin-bottom: 4px; }
+  .stat-cell .lab{ font-size: 13px; color: var(--ink-muted); font-weight: 500; }
+
+  /* SUMMARY */
+  .summary p{ font-size: 17px; color: var(--ink-soft); max-width: 780px; margin-bottom: 16px; }
+  .summary p:last-child{ margin-bottom: 0; }
+
+  /* EXPERIENCE */
+  .job{ padding: 26px 0; border-top: 1px solid var(--line); }
+  .job:first-child{ border-top: none; padding-top: 0; }
+  .job-head{
+    display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap: 6px 16px; margin-bottom: 6px;
+  }
+  .job-title{ font-size: 18px; font-weight: 700; }
+  .job-dates{ font-size: 13px; font-weight: 600; color: var(--ink-muted); white-space:nowrap; }
+  .job-org{ font-size: 15px; color: var(--accent-ink); font-weight: 600; margin-bottom: 14px; }
+  .job ul{ padding-left: 20px; color: var(--ink-soft); font-size: 15px; }
+  .job li{ margin-bottom: 9px; }
+  .job li:last-child{ margin-bottom: 0; }
+
+  /* PROJECTS */
+  .project-grid{
+    display:grid; grid-template-columns: repeat(2, 1fr); gap: 20px;
+  }
+  .project-card{
+    background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 26px; display:flex; flex-direction:column;
+  }
+  .project-card h3{ font-size: 18px; font-weight: 800; margin-bottom: 10px; }
+  .project-card p{ font-size: 14.5px; color: var(--ink-soft); margin-bottom: 18px; flex-grow:1; }
+  .project-links{ display:flex; flex-wrap:wrap; gap: 10px; }
+  .project-links a{
+    font-size: 12.5px; font-weight: 700; color: var(--accent-ink); background: var(--accent-soft);
+    padding: 7px 12px; border-radius: 999px;
+  }
+  .project-links a:hover{ text-decoration:none; background:#e0e8fc; }
+
+  /* SKILLS */
+  .skills-cols{ display:grid; grid-template-columns: 1.3fr 1fr; gap: 40px; }
+  .skill-block h4{ font-size: 14px; font-weight: 700; margin-bottom: 14px; color: var(--ink); }
+  .pill-wrap{ display:flex; flex-wrap:wrap; gap: 9px; }
+  .pill{
+    font-size: 13px; font-weight: 600; color: var(--ink-soft); background: var(--panel);
+    border: 1px solid var(--line); padding: 7px 13px; border-radius: 999px;
+  }
+
+  /* CERTS / EDUCATION */
+  .two-col{ display:grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .list-simple{ list-style:none; }
+  .list-simple li{
+    font-size: 14.5px; color: var(--ink-soft); padding: 10px 0; border-top: 1px solid var(--line);
+  }
+  .list-simple li:first-child{ border-top:none; padding-top: 0; }
+  .list-simple .primary{ color: var(--ink); font-weight: 600; }
+
+  /* EARLY CAREER */
+  .early-career{ background: var(--panel); border-radius: var(--radius); padding: 28px 30px; }
+  .early-career h4{ font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+  .early-career .org{ font-size: 13px; color: var(--ink-muted); font-weight: 600; margin-bottom: 12px; }
+  .early-career p{ font-size: 14.5px; color: var(--ink-soft); }
+
+  /* FOOTER / CONTACT */
+  .contact-cta{ text-align:center; padding: 70px 0 90px 0; }
+  .contact-cta h2{ font-size: 30px; font-weight: 800; margin-bottom: 14px; letter-spacing: -0.01em; }
+  .contact-cta p{ font-size: 16px; color: var(--ink-soft); max-width: 520px; margin: 0 auto 30px auto; }
+  footer{ text-align:center; padding: 30px 0 50px 0; font-size: 13px; color: var(--ink-muted); }
+
+  @media (max-width: 780px){
+    .nav-links{ display:none; }
+    .hero h1{ font-size: 34px; }
+    .hero .role-line{ font-size: 17px; }
+    .stats-strip{ grid-template-columns: repeat(2, 1fr); }
+    .project-grid{ grid-template-columns: 1fr; }
+    .skills-cols{ grid-template-columns: 1fr; gap: 28px; }
+    .two-col{ grid-template-columns: 1fr; gap: 28px; }
+    section{ padding: 54px 0; }
+  }
+</style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="wrap">
+      <div class="nav-name">Dennis M. Yesu</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+      </div>
+      <a class="nav-cta" href="mailto:dennisyesu4@gmail.com">Get in touch</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Open to Product &amp; Project Manager roles</div>
+      <h1>Dennis Misenmawu Yesu</h1>
+      <div class="role-line">Product Manager · Fintech &amp; Cross-Functional Product Delivery · Agile/Scrum</div>
+      <p class="lede">Product-focused leader with 5+ years driving end-to-end product strategy and delivery across Fintech, EdTech, E-commerce, and SaaS. Most recently led the public launch of a fintech trading app to 3,000+ active users, ₦2.3 billion+ in wallet transactions, and $950,000+ in crypto and gift-card trades within 30 days — while closing critical KYC and fraud risks through vendor redundancy and automated detection systems.</p>
+      <div class="contact-row">
+        <a href="mailto:dennisyesu4@gmail.com">dennisyesu4@gmail.com</a>
+        <span>+234 813 848 4097</span>
+        <span>Lagos, Nigeria</span>
+        <a href="https://www.linkedin.com/in/dennisyesu" target="_blank" rel="noopener">linkedin.com/in/dennisyesu</a>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="mailto:dennisyesu4@gmail.com">Email me</a>
+        <a class="btn btn-secondary" href="https://www.linkedin.com/in/dennisyesu" target="_blank" rel="noopener">View LinkedIn</a>
+        <a class="btn btn-secondary" href="#projects">See featured work</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <h2 class="section-title">Impact at a glance</h2>
+      <div class="stats-strip">
+        <div class="stat-cell"><div class="val">350,000+</div><div class="lab">combined users across shipped products</div></div>
+        <div class="stat-cell"><div class="val">15+</div><div class="lab">live mobile &amp; web products owned</div></div>
+        <div class="stat-cell"><div class="val">₦2.3B+</div><div class="lab">wallet transactions driven at PUEX (30 days)</div></div>
+        <div class="stat-cell"><div class="val">5+ yrs</div><div class="lab">product &amp; project leadership experience</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap summary">
+      <h2 class="section-title">About</h2>
+      <p>I'm a Product Manager with 5+ years driving end-to-end product strategy across Fintech, EdTech, E-commerce, and SaaS, currently leading product for PU Digital Merchant's PUEX trading app.</p>
+      <p>I led PUEX's public launch in July 2026, and within 30 days the platform reached 3,000+ active users, ₦2.3 billion+ in wallet transactions, and $950,000+ in crypto and gift-card trades, holding 99% uptime and a 0.12% crash rate with 4.6/5.0 (iOS) and 4.5/5.0 (Android) user ratings. On the risk side, I closed a single-point-of-failure KYC vulnerability by integrating a second identity-verification provider, and directed an automated fraud detection system that blocked two live fraud attempts with zero funds lost.</p>
+      <p>Before PUEX, as Head of Product &amp; Operations at Soft-Web Digital, I directed delivery across fintech, trading, and e-commerce platforms at 95% on-time execution, scaled the Ecstasy bill-payment app to 100,000+ users processing ₦50 million+ in annual utility payments, and led a 20+ person cross-functional team. Across my career I've shipped 15+ live products to a combined 350,000+ users.</p>
+      <p>I hold an M.Sc. in Biomedical Laboratory Sciences, which gives my product decisions an unusually rigorous, data-first foundation, and I'm a Google Project Management Diploma holder.</p>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <h2 class="section-title">Experience</h2>
+
+      <div class="job">
+        <div class="job-head">
+          <div class="job-title">Product Manager (Project &amp; Product Manager)</div>
+          <div class="job-dates">June 2025 – Present</div>
+        </div>
+        <div class="job-org">PU Digital Merchant (PUEX) · Fintech · Contract · Lagos, Nigeria</div>
+        <ul>
+          <li>Led the public launch of PUEX (iOS/Android, July 2026), driving 3,000+ active users, ₦2.3B+ in wallet transactions, and $950,000+ in crypto and gift-card trades within the first 30 days.</li>
+          <li>Sustained 99% uptime and a 0.12% crash rate, with app store ratings of 4.6/5.0 (iOS) and 4.5/5.0 (Android).</li>
+          <li>Closed a single-point-of-failure KYC risk by onboarding a second identity-verification provider (Prembly) for dual-provider redundancy.</li>
+          <li>Directed an automated fraud Watchlist and multi-entity blacklisting engine, blocking two fraud incidents with zero funds lost.</li>
+          <li>Redesigned the gift-card trade negotiation workflow with dynamic counter-offers and admin-side rate validation.</li>
+          <li>Ran Agile/Scrum for a 4-person cross-functional team (Backend, Mobile, Frontend/Admin, QA); negotiated API and KYC vendor terms while maintaining 99.99% platform uptime.</li>
+          <li>Delivered biweekly executive status reports to the CEO and stood up marketing data pipelines (Brevo) and store-listing analytics.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div class="job-title">Head of Product &amp; Operations</div>
+          <div class="job-dates">July 2022 – December 2025</div>
+        </div>
+        <div class="job-org">Soft-Web Digital Ltd. · Software Development Firm · Hybrid · Lagos, Nigeria</div>
+        <ul>
+          <li>Directed end-to-end product delivery for B2B/B2C products across Fintech, Trading, and E-commerce at 95% on-time execution.</li>
+          <li>Launched Ecstasy, a fintech bill-payment app, scaling it to 100,000+ active users within 24 months while processing ₦50 million+ in annual utility payments.</li>
+          <li>Led a cross-functional team of 20+ (developers, designers, DevOps, QA).</li>
+          <li>Drove a 30% revenue increase via a flagship mobile payment product launch, reaching 25,000 users in the first 90 days.</li>
+          <li>Standardized product documentation across the org — PRDs, FRDs, risk logs, and post-mortems.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div class="job-title">Project Manager</div>
+          <div class="job-dates">June 2021 – June 2022</div>
+        </div>
+        <div class="job-org">Soft-Web Digital Ltd. · Hybrid · Lagos, Nigeria</div>
+        <ul>
+          <li>Delivered two-thirds of the organization's initial high-impact web and mobile projects on schedule.</li>
+          <li>Built the organization's first PRD and issue-log templates, later scaled to support 15+ clients.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div class="job-title">Operations Manager</div>
+          <div class="job-dates">February 2020 – May 2021</div>
+        </div>
+        <div class="job-org">DMY Enterprise · Healthcare Supply · Lagos, Nigeria</div>
+        <ul>
+          <li>Streamlined operational workflows, lifting client retention by 25% and maintaining a 98% on-time delivery rate across logistics.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="project-grid">
+
+        <div class="project-card">
+          <h3>PUEX — Crypto &amp; Gift Card Trading App</h3>
+          <p>Led product strategy and launch of a fintech trading app; grew to 3,000+ active users, ₦2.3 billion+ in wallet transactions, and $950,000+ in crypto and gift-card trades within 30 days, with app store ratings of 4.6/5.0 (iOS) and 4.5/5.0 (Android).</p>
+          <div class="project-links">
+            <a href="https://puexchange.com" target="_blank" rel="noopener">Website</a>
+            <a href="https://play.google.com/store/apps/details?id=com.puex.app" target="_blank" rel="noopener">Google Play</a>
+            <a href="https://apps.apple.com/ng/app/puex-app/id6758914677" target="_blank" rel="noopener">App Store</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>Ecstasy — Bill Payment &amp; Gift Card Trading App</h3>
+          <p>Owned the roadmap and Agile delivery of a fintech utility app; managed backlog, sprint reviews, and third-party API integrations. Grew to 100,000+ active users within 2 years.</p>
+          <div class="project-links">
+            <a href="https://play.google.com/store/apps/details?id=com.softweb.ecstasy" target="_blank" rel="noopener">Google Play</a>
+            <a href="https://apps.apple.com/ng/app/ecstasy-virtual-dollar-card/id6448960100" target="_blank" rel="noopener">App Store</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>Billporte — Fintech Super App</h3>
+          <p>Led end-to-end product development of a multi-feature fintech app integrating Safehaven, Flutterwave, Reloadly, Vtpass, and Giftbills APIs for bill payment, flight booking, and trading. Launched on Web, Google Play, and the App Store.</p>
+          <div class="project-links">
+            <a href="https://billporte.com/" target="_blank" rel="noopener">Website</a>
+            <a href="https://play.google.com/store/apps/details?id=com.billporte.android" target="_blank" rel="noopener">Google Play</a>
+            <a href="https://apps.apple.com/ng/app/billporte/id6751822775" target="_blank" rel="noopener">App Store</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>KSB-Tech — Crypto &amp; Gift Card Trading Platform</h3>
+          <p>Co-led product development and launch of a web and mobile crypto trading app, now with 32,000+ registered users across web and mobile.</p>
+          <div class="project-links">
+            <a href="https://ksbtech.com.ng/" target="_blank" rel="noopener">Web App</a>
+            <a href="https://play.google.com/store/apps/details?id=com.app.ksbtech" target="_blank" rel="noopener">Google Play</a>
+            <a href="https://apps.apple.com/ng/app/ksbtech/id1576849320" target="_blank" rel="noopener">App Store</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap skills-cols">
+      <div class="skill-block">
+        <h4>Core Competencies</h4>
+        <div class="pill-wrap">
+          <span class="pill">Product Strategy &amp; Roadmap Development</span>
+          <span class="pill">Backlog Management &amp; Sprint Planning (Agile/Scrum)</span>
+          <span class="pill">Cross-Functional Collaboration</span>
+          <span class="pill">Product Metrics &amp; Data-Driven Decisions</span>
+          <span class="pill">Stakeholder &amp; Customer Feedback Prioritization</span>
+          <span class="pill">Executive &amp; Leadership Communication</span>
+          <span class="pill">API Integration &amp; Technical Requirements</span>
+          <span class="pill">Fintech Product Development</span>
+          <span class="pill">Risk Management &amp; Scope Control</span>
+          <span class="pill">OKR Alignment &amp; Strategic Planning</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <h4>Tools &amp; Technologies</h4>
+        <div class="pill-wrap">
+          <span class="pill">Jira</span>
+          <span class="pill">ClickUp</span>
+          <span class="pill">Trello</span>
+          <span class="pill">Confluence</span>
+          <span class="pill">Notion</span>
+          <span class="pill">Slack</span>
+          <span class="pill">GitHub</span>
+          <span class="pill">Postman</span>
+          <span class="pill">Figma</span>
+          <span class="pill">FigJam</span>
+          <span class="pill">Google Workspace</span>
+          <span class="pill">Zoho</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap two-col">
+      <div>
+        <h2 class="section-title">Certifications &amp; Training</h2>
+        <ul class="list-simple">
+          <li><span class="primary">Google Project Management Diploma</span> — Coursera</li>
+          <li><span class="primary">Project Management Training Certificate</span> — The Open University, UK</li>
+          <li><span class="primary">Effective Leadership Certificate</span> — HP LIFE</li>
+          <li><span class="primary">IT for Business Success</span> — HP LIFE</li>
+          <li><span class="primary">Digital Marketing Fundamentals</span> — Google</li>
+          <li><span class="primary">Soft Skills Training</span> — Jobberman</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="section-title">Education</h2>
+        <ul class="list-simple">
+          <li><span class="primary">M.Sc. Biomedical Laboratory Sciences</span><br>IRGIB-Africa University, Benin Republic — 2017</li>
+          <li><span class="primary">B.Sc. Biomedical Laboratory Sciences</span><br>IRGIB-Africa University, Benin Republic — 2015</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2 class="section-title">Earlier Career</h2>
+      <div class="early-career">
+        <h4>Medical Laboratory Scientist &amp; Junior Lecturer</h4>
+        <div class="org">University College Hospital, Ibadan &amp; IRGIB-Africa University, Benin Republic · 2016 – 2020</div>
+        <p>Performed diagnostic testing across hematology, microbiology, and clinical chemistry at 98%+ accuracy; delivered undergraduate lectures at a 90% student pass rate; mentored junior scientists. Built a foundation in structured data analysis, precision documentation, and process rigor that carries directly into analytical, evidence-based product decisions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap contact-cta">
+      <h2>Let's build something worth shipping.</h2>
+      <p>Open to Product Manager and Project Manager roles in Fintech, SaaS, and E-commerce. Happy to walk through any of the launches above in more detail.</p>
+      <div class="cta-row" style="justify-content:center;">
+        <a class="btn btn-primary" href="mailto:dennisyesu4@gmail.com">Email dennisyesu4@gmail.com</a>
+        <a class="btn btn-secondary" href="https://www.linkedin.com/in/dennisyesu" target="_blank" rel="noopener">Connect on LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Dennis Misenmawu Yesu · Product &amp; Project Manager · Lagos, Nigeria
+  </footer>
+
+</body>
+</html>
