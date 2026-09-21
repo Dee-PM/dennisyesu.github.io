@@ -131,6 +131,21 @@
   .project-links a:hover{border-bottom-color:var(--gold);}
   .more-note{font-size:13.5px;color:var(--text-faint);margin-top:20px;max-width:70ch;font-style:italic;}
 
+  /* case studies */
+  .case-study{background:var(--bg-card-2);border:1px solid var(--border);border-radius:14px;padding:32px;margin-top:22px;}
+  .case-study:first-child{margin-top:0;}
+  .cs-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 20px;}
+  .cs-title{font-size:1.22rem;font-weight:700;color:var(--text);max-width:56ch;}
+  .cs-org{font-size:13px;color:var(--gold);font-weight:600;white-space:nowrap;}
+  .cs-star{display:grid;grid-template-columns:132px 1fr;gap:12px 20px;margin-top:24px;}
+  .cs-star dt{font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-faint);padding-top:2px;margin:0;}
+  .cs-star dd{font-size:14.5px;color:var(--text);margin:0;max-width:70ch;}
+  .cs-star dd ul{margin:0;padding-left:18px;}
+  .cs-star dd li{margin-top:6px;}
+  .cs-star dd li:first-child{margin-top:0;}
+  .cs-result{display:block;background:var(--bg-card);border:1px solid var(--gold-border);border-radius:10px;padding:14px 16px;font-size:14px;line-height:1.55;color:var(--gold-light);font-variant-numeric:tabular-nums;}
+  .cs-reflect{font-size:13.5px;color:var(--text-muted);font-style:italic;}
+
   /* skills */
   .skills-cols{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;}
   .skill-block h3{font-size:1rem;font-weight:700;margin-bottom:16px;}
@@ -168,6 +183,7 @@
     .nav-links{display:none;}
     .stats-strip{grid-template-columns:repeat(2,1fr);}
     .about-grid,.skills-cols,.two-col,.project-grid{grid-template-columns:1fr;}
+    .cs-star{grid-template-columns:1fr;}
     .job-head{flex-direction:column;align-items:flex-start;}
   }
 </style>
@@ -182,6 +198,7 @@
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
+      <a href="#case-studies">Case Studies</a>
       <a href="#skills">Skills</a>
     </div>
     <a class="btn btn-primary nav-cta" href="mailto:dennisyesu4@gmail.com">Get in touch</a>
@@ -204,6 +221,7 @@
     <div class="cta-row">
       <a class="btn btn-primary" href="mailto:dennisyesu4@gmail.com">Email me</a>
       <a class="btn btn-secondary" href="https://www.linkedin.com/in/dennisyesu" target="_blank" rel="noopener">View LinkedIn</a>
+      <a class="btn btn-secondary" href="Dennis_Yesu_Resume.pdf" download>Download R&eacute;sum&eacute;</a>
       <a class="btn btn-secondary" href="#projects">See key projects</a>
     </div>
   </div>
@@ -383,6 +401,112 @@
     <p class="more-note">+ more &mdash; these 8 are featured highlights from 15+ live mobile and web products shipped across fintech, HR tech, e-commerce, and events over the past 5+ years. Happy to walk through any of the others on request.</p>
   </section>
 
+  <section id="case-studies">
+    <div class="eyebrow">Case Study Deep Dive</div>
+
+    <div class="case-study">
+      <div class="cs-head">
+        <span class="cs-title">PUEX Public Launch: Taking a Fintech Trading App from Plan to 3,000+ Users in 30 Days</span>
+        <span class="cs-org">PU Digital Merchant (PU-Exchange) &middot; Project &amp; Product Manager &middot; June 2025 &ndash; Present</span>
+      </div>
+      <dl class="cs-star">
+        <dt>Situation</dt>
+        <dd>PU-Exchange needed to take its crypto and gift card trading app from internal build to a public launch on iOS and Android, with no redundancy in identity verification and no formalized delivery cadence across a small cross-functional team.</dd>
+        <dt>My Role</dt>
+        <dd>Owned the launch end to end as Project &amp; Product Manager: planning, budget-relevant vendor negotiation, risk management, and delivery, reporting progress directly to the CEO.</dd>
+        <dt>Approach</dt>
+        <dd>
+          <ul>
+            <li>Ran the delivery plan for a 4-person cross-functional team (Backend, Mobile, Frontend/Admin, QA) through Agile ceremonies: sprint planning, daily stand-ups, and retrospectives, using retro findings to keep tightening post-launch delivery.</li>
+            <li>Identified a single point of failure in KYC (one identity-verification provider) and sourced a second provider, delivering dual-provider redundancy across every verification tier before it could disrupt onboarding.</li>
+            <li>Directed design of an automated fraud watchlist and multi-entity blacklisting system, and onboarded a second payment channel (Payaza) to remove single-provider dependency.</li>
+            <li>Delivered biweekly status reports to the CEO on timeline, risk, and delivery outcomes, stepping up to daily or weekly updates whenever urgency required it.</li>
+          </ul>
+        </dd>
+        <dt>Result</dt>
+        <dd><span class="cs-result">All launch milestones hit &middot; 3,000+ users &middot; &#8358;2 billion+ in wallet transactions &middot; $950,000+ traded &middot; 99.99% uptime &middot; 0.08% crash rate &middot; two fraud attempts blocked with zero funds lost &mdash; all within the first 30 days.</span></dd>
+        <dt>Lesson</dt>
+        <dd class="cs-reflect">The KYC fix is now my default lens on vendor risk: treat any single provider as a future outage and price the backup into the plan before launch, not after an incident forces it.</dd>
+      </dl>
+    </div>
+
+    <div class="case-study">
+      <div class="cs-head">
+        <span class="cs-title">Scaling Ecstasy to 100,000+ Users While Running a 20+ Person Delivery Team</span>
+        <span class="cs-org">Soft-Web Digital Ltd. &middot; Head of Product &amp; Operations &middot; July 2022 &ndash; December 2025</span>
+      </div>
+      <dl class="cs-star">
+        <dt>Situation</dt>
+        <dd>Soft-Web Digital was running multiple B2B and B2C platforms across Fintech, Trading, and E-commerce, including the Ecstasy bill-payment app, without standardized risk documentation or a consistent delivery cadence across a large, cross-functional team.</dd>
+        <dt>My Role</dt>
+        <dd>Directed end-to-end delivery across a 20+ person team of developers, designers, DevOps engineers, and QA specialists, and owned budget and vendor negotiations across the studio's engagements.</dd>
+        <dt>Approach</dt>
+        <dd>
+          <ul>
+            <li>Introduced PRDs, risk logs, and post-mortems as standard practice on every engagement, cutting scope ambiguity and giving leadership a consistent basis for decisions.</li>
+            <li>Set measurable KPIs and structured feedback loops per team and engagement to catch slippage early instead of at launch.</li>
+            <li>Negotiated contract rates with external developers and designers to control delivery cost without compromising quality.</li>
+            <li>Directed delivery of Ecstasy, a fintech bill-payment and gift-card trading app, from backlog through public release.</li>
+          </ul>
+        </dd>
+        <dt>Result</dt>
+        <dd><span class="cs-result">95% on-time execution across all major launches &middot; Ecstasy scaled to 100,000+ active users within 24 months &middot; &#8358;50 million+ in annual utility payments processed &middot; &#8358;5 million+ saved cumulatively through vendor renegotiation.</span></dd>
+        <dt>Lesson</dt>
+        <dd class="cs-reflect">Standardizing documentation mattered more for speed than for compliance: once every engagement shared the same paper trail, handoffs between teams stopped losing context, which is what actually let a 20+ person team hit 95% on-time delivery.</dd>
+      </dl>
+    </div>
+
+    <div class="case-study">
+      <div class="cs-head">
+        <span class="cs-title">Billporte: Coordinating Five Payment &amp; Service Providers Into One Fintech Super App</span>
+        <span class="cs-org">Soft-Web Digital Ltd. &middot; Project Manager</span>
+      </div>
+      <dl class="cs-star">
+        <dt>Situation</dt>
+        <dd>Billporte needed to bring bill payment, flight booking, and trading into a single app, which meant stitching together five separate third-party providers (Safehaven, Flutterwave, Reloadly, Vtpass, and Giftbills), each with its own uptime, failure modes, and API quirks.</dd>
+        <dt>My Role</dt>
+        <dd>Led end-to-end development of the multi-feature app, owning how the five integrations came together and how failures across any of them would be handled.</dd>
+        <dt>Approach</dt>
+        <dd>
+          <ul>
+            <li>Sequenced the five integrations (Safehaven, Flutterwave, Reloadly, Vtpass, Giftbills) so each provider was validated on its own before the next was layered in, instead of debugging five APIs' worth of failures at once.</li>
+            <li>Coordinated provider risk and failure handling across all five vendors so one provider's downtime didn't take down the whole payment flow.</li>
+            <li>Kept engineering and design aligned on which provider covered which feature (bills vs. flights vs. trading) so scope and ownership didn't blur between them.</li>
+          </ul>
+        </dd>
+        <dt>Result</dt>
+        <dd><span class="cs-result">Delivered a live multi-feature fintech app with 5 payment and service APIs integrated and running in production, covering bill payment, flight booking, and trading in one place.</span></dd>
+        <dt>Lesson</dt>
+        <dd class="cs-reflect">With five vendors in one app, the real risk was never any single integration, it was what happens when two of them have a bad day in the same week. Building failure handling in from the start saved a lot of firefighting later.</dd>
+      </dl>
+    </div>
+
+    <div class="case-study">
+      <div class="cs-head">
+        <span class="cs-title">NITEON: Building a B2B Marketplace to Connect African Manufacturers With Global Buyers</span>
+        <span class="cs-org">Soft-Web Digital Ltd. &middot; Project Manager</span>
+      </div>
+      <dl class="cs-star">
+        <dt>Situation</dt>
+        <dd>African manufacturers and small businesses had strong products but limited direct access to international buyers. NITEON set out to build a B2B marketplace, positioned as an "Africa Trade Center," that could bring supply from thousands of manufacturers to global demand in one place.</dd>
+        <dt>My Role</dt>
+        <dd>Directed development of the marketplace as Project Manager, from seller-facing tools through to the platform's AI shopping assistant.</dd>
+        <dt>Approach</dt>
+        <dd>
+          <ul>
+            <li>Directed development of seller onboarding tools, including product listing and minimum order quantity (MOQ) tracking, so manufacturers could manage bulk orders without manual back-and-forth.</li>
+            <li>Directed development of "Kunte," an AI-powered shopping assistant, to help international buyers navigate the catalog and find suppliers faster.</li>
+            <li>Coordinated cataloging and onboarding across multiple product categories (Visual Arts, Raw Foods &amp; Health, Commodities, Fashion &amp; Beauty) so the seller experience stayed consistent regardless of product type.</li>
+          </ul>
+        </dd>
+        <dt>Result</dt>
+        <dd><span class="cs-result">Marketplace scaled to 87,000+ manufacturers and 700,000+ goods delivered monthly, with 500+ weekly sales moving through the platform.</span></dd>
+        <dt>Lesson</dt>
+        <dd class="cs-reflect">A B2B marketplace lives or dies on how easy the boring part is: seller onboarding. Getting listing and MOQ tracking right mattered more to adoption than any AI feature we shipped on top of it.</dd>
+      </dl>
+    </div>
+  </section>
+
   <section id="skills">
     <div class="eyebrow">Core Competencies &amp; Tools</div>
     <div class="skills-cols">
@@ -449,6 +573,7 @@
     <div class="cta-row">
       <a class="btn btn-primary" href="mailto:dennisyesu4@gmail.com">Email dennisyesu4@gmail.com</a>
       <a class="btn btn-secondary" href="https://www.linkedin.com/in/dennisyesu" target="_blank" rel="noopener">Connect on LinkedIn</a>
+      <a class="btn btn-secondary" href="Dennis_Yesu_Resume.pdf" download>Download R&eacute;sum&eacute;</a>
     </div>
   </section>
 
